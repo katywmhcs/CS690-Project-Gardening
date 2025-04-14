@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Gardening
 {
     // Models
-    public class PlantLog
+    class PlantLog
     {
         public int Id { get; set; }
         public string PlantName { get; set; }
@@ -13,7 +13,7 @@ namespace Gardening
         public DateTime DateLogged { get; set; }
     }
 
-    public class InventoryItem
+    class InventoryItem
     {
         public int Id { get; set; }
         public string ItemName { get; set; }
@@ -22,7 +22,7 @@ namespace Gardening
         public string Notes { get; set; }
     }
 
-    public class PlantingLog
+    class PlantingLog
     {
         public int Id { get; set; }
         public string PlantName { get; set; }
@@ -30,7 +30,7 @@ namespace Gardening
         public string Notes { get; set; }
     }
 
-    public class GardeningTask
+    class GardeningTask
     {
         public int Id { get; set; }
         public string Notes { get; set; }
@@ -40,7 +40,7 @@ namespace Gardening
     }
 
     // Data Storage
-    public static class DataStore
+    static class DataStore
     {
         public static List<PlantLog> PlantLogs = new List<PlantLog>();
         public static List<InventoryItem> Inventory = new List<InventoryItem>();
@@ -49,7 +49,7 @@ namespace Gardening
     }
 
     // Managers
-    public static class PlantHealthManager
+    static class PlantHealthManager
     {
         public static void AddPlantLog()
         {
@@ -85,7 +85,7 @@ namespace Gardening
         }
     }
 
-    public static class InventoryManager
+    static class InventoryManager
     {
         public static void AddInventoryItem()
         {
@@ -124,7 +124,7 @@ namespace Gardening
         }
     }
 
-public static class PlantingManager
+static class PlantingManager
 {
     public static void AddPlantingLog()
     {
@@ -159,7 +159,7 @@ public static class PlantingManager
     }
 }
 
-public static class GardeningTaskScheduler
+static class GardeningTaskScheduler
 {
     public static void AddScheduledTask()
     {
@@ -195,9 +195,8 @@ public static class GardeningTaskScheduler
 }
 
 
-
     // Program Entry
-    public class Program
+    class Program
     {
         static List<PlantingLog> plantingLogs = new List<PlantingLog>();
         static List<GardeningTask> gardeningTasks = new List<GardeningTask>();
@@ -257,3 +256,5 @@ public static class GardeningTaskScheduler
         }
     }
 }
+
+
